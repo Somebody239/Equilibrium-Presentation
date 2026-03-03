@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --eq-cream: #FAFAF7;
+  --eq-cream-deep: #F3F4F0;
+  --eq-blue: #2563EB;
+  --eq-teal: #0D9488;
+  --eq-red: #EF4444;
+  --eq-amber: #F59E0B;
+  --eq-text: #111827;
+  --eq-text-secondary: #6B7280;
+  --eq-divider: #E5E7EB;
+}
+
+body {
+  color: var(--eq-text);
+  background-color: var(--eq-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar hidden for presentation */
+::-webkit-scrollbar {
+  display: none;
+}
