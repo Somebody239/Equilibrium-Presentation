@@ -1,93 +1,83 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import SlideContainer from "./shared/SlideContainer";
-
-const panels = [
-    {
-        icon: "🧠",
-        title: "CBT + Neurofeedback",
-        desc: "Heal the individual brain",
-        color: "eq-teal",
-    },
-    {
-        icon: "⚖️",
-        title: "Equity Surveys",
-        desc: "Hold institutions accountable",
-        color: "eq-blue",
-    },
-    {
-        icon: "📊",
-        title: "Personalized Grading",
-        desc: "Eliminate comparison culture",
-        color: "eq-amber",
-    },
-];
+import { LayoutDashboard, HandHeart, Laptop2, Globe2 } from "lucide-react";
 
 export default function Slide8({ step }: { step: number }) {
     return (
-        <SlideContainer className="bg-eq-cream">
-            <div className="relative z-10 w-full max-w-5xl mx-auto">
+        <div className="relative w-full h-full flex flex-col items-center justify-center bg-ic-bg overflow-hidden text-ic-text">
+            
+            <div className="relative z-10 w-full max-w-7xl px-12 h-full flex flex-col pt-24 pb-16">
+                
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+                    <h2 className="text-4xl md:text-6xl font-bold mb-4">Structural Solutions <span className="text-ic-gold">and Limitations</span></h2>
+                </motion.div>
 
-                {/* Heading */}
-                <motion.div
+                <div className="flex-1 grid grid-cols-3 gap-8 mt-12">
+                    
+                    {/* Solution 1 */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ 
+                                    opacity: step >= 0 ? 1 : 0, 
+                                    y: step >= 0 ? 0 : 30 
+                                }}
+                                className="bg-ic-bg-secondary p-8 rounded-2xl flex flex-col border-t-4 border-t-ic-gold"
+                            >
+                                <LayoutDashboard className="text-ic-gold mb-6" size={40} />
+                                <h3 className="text-2xl font-bold mb-4">Urban Design</h3>
+                                <p className="text-ic-text-secondary text-lg">
+                                    Communal tables that encourage conversation. Sightlines that reveal faces instead of screen backs. Protected zoning for non-commercial third places.
+                                </p>
+                            </motion.div>
+
+                    {/* Solution 2 */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ 
+                                    opacity: step >= 1 ? 1 : 0, 
+                                    y: step >= 1 ? 0 : 30 
+                                }}
+                                className="bg-ic-bg-secondary p-8 rounded-2xl flex flex-col border-t-4 border-t-ic-gold"
+                            >
+                                <HandHeart className="text-ic-gold mb-6" size={40} />
+                                <h3 className="text-2xl font-bold mb-4">Public Health Policy</h3>
+                                <p className="text-ic-text-secondary text-lg">
+                                    Fund programming, not just floor space. Partner with cafés and libraries to sponsor regular meetups and structured social programs.
+                                </p>
+                            </motion.div>
+
+                    {/* Solution 3 */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ 
+                                    opacity: step >= 2 ? 1 : 0, 
+                                    y: step >= 2 ? 0 : 30 
+                                }}
+                                className="bg-ic-bg-secondary p-8 rounded-2xl flex flex-col border-t-4 border-t-ic-gold"
+                            >
+                                <Laptop2 className="text-ic-gold mb-6" size={40} />
+                                <h3 className="text-2xl font-bold mb-4">Digital Platform Design</h3>
+                                <p className="text-ic-text-secondary text-lg">
+                                    Prioritize depth over volume. Emphasize stable groups over massive follower counts. Link online communities to offline gatherings.
+                                </p>
+                            </motion.div>
+
+                </div>
+
+                <motion.div 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-10 text-center"
+                    transition={{ delay: 0.5, duration: 1 }}
+                    className="mt-12 bg-ic-coffee/20 p-6 rounded-2xl border border-ic-coffee/40 flex items-center gap-6"
                 >
-                    <span className="text-eq-teal font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Solutions</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-eq-text tracking-tight">The Bridge</h2>
-                    <p className="text-eq-text-secondary text-base font-light mt-2">
-                        Three solutions. Three lenses. One platform.
+                    <Globe2 className="text-ic-text-secondary shrink-0" size={32} />
+                    <p className="text-ic-text-secondary text-lg">
+                        <span className="text-ic-text font-bold">Limitations:</span> Most research focuses on Western contexts. More research is needed in non-Western and lower-income settings where traditional networks may function differently.
                     </p>
                 </motion.div>
 
-                {/* Three panels — each appears on steps 1-3, merge visual on step 4 */}
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-700 ${step >= 4 ? "md:gap-0" : ""}`}>
-                    {panels.map((panel, i) => (
-                        <div key={i} className="min-h-[180px] relative">
-                            <AnimatePresence>
-                                {step >= i + 1 && (
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{
-                                            opacity: 1,
-                                            scale: step >= 4 ? 0.95 : 1,
-                                        }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.6 }}
-                                        className={`bg-eq-cream-deep rounded-[20px] p-6 shadow-[0_2px_12px_rgba(0,0,0,0.06)] text-center h-full flex flex-col items-center justify-center gap-3 transition-all duration-700 ${step >= 4 ? "border-2 border-eq-teal/30" : ""
-                                            }`}
-                                    >
-                                        <span className="text-4xl">{panel.icon}</span>
-                                        <h3 className="text-lg font-bold text-eq-text">{panel.title}</h3>
-                                        <p className="text-eq-text-secondary text-sm font-light">{panel.desc}</p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Merge message — appears on step 4 */}
-                <div className="min-h-[48px] mt-8 relative">
-                    <AnimatePresence>
-                        {step >= 4 && (
-                            <motion.p
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className="text-center text-xl font-bold text-eq-teal"
-                            >
-                                What if they were one thing?
-                            </motion.p>
-                        )}
-                    </AnimatePresence>
-                </div>
-
             </div>
-        </SlideContainer>
+        </div>
     );
 }

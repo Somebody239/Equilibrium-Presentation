@@ -1,64 +1,62 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import SlideContainer from "./shared/SlideContainer";
-
-const dotJots = [
-    { text: "Aristotle: eudaimonia — sustained flourishing, not output", color: "eq-blue" },
-    { text: "Institutions structurally embed stress (Högberg, 2024 — BERA)", color: "eq-blue" },
-    { text: "Kant: students as economic means, not ends", color: "eq-blue" },
-    { text: "Moore (2022): capitalist hierarchies → measurable mental strain", color: "eq-blue" },
-    { text: "Mill: collective harm outweighs institutional benefit", color: "eq-blue" },
-    { text: "OSAP: 85% → 25% grants (Snisarenko, CBC, 2026)", color: "eq-red" },
-];
+import { motion } from "framer-motion";
+import { Smartphone, Wine, GlassWater, ArrowRight, UserX } from "lucide-react";
 
 export default function Slide5({ step }: { step: number }) {
     return (
-        <SlideContainer className="bg-eq-cream">
-            <div className="relative z-10 w-full">
-
-                {/* Heading */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-8"
-                >
-                    <div className="flex items-center gap-3 mb-3">
-                        <span className="text-eq-blue font-bold tracking-[0.2em] uppercase text-xs">Lens 1</span>
-                        <span className="text-2xl">⚖️</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-eq-text tracking-tight">Philosophical</h2>
-                    <p className="text-eq-text-secondary text-base font-light mt-2 max-w-2xl">
-                        Schools are failing at their most fundamental promise — to help students flourish.
+        <div className="relative w-full h-full flex flex-col items-center justify-center bg-ic-bg overflow-hidden text-ic-text">
+            
+            <div className="relative z-10 w-full max-w-7xl px-12 h-full flex flex-col pt-24 pb-16">
+                
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="text-center">
+                    <h2 className="text-4xl md:text-6xl font-bold mb-4">The Digital <span className="text-ic-gold">Mirage</span></h2>
+                    <p className="text-xl text-ic-text-secondary max-w-3xl mx-auto">
+                        Digital environments recreate the sensation of constant contact while stripping away elements that build deep relationships.
                     </p>
                 </motion.div>
 
-                {/* Dot jots — 2-column grid, each fades in on its step */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {dotJots.map((jot, i) => (
-                        <div key={i} className="min-h-[64px] relative">
-                            <AnimatePresence>
-                                {step >= i + 1 ? (
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.6 }}
-                                        className="p-4 rounded-[16px] bg-eq-cream-deep shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-start gap-3 h-full"
-                                    >
-                                        <span className={`text-${jot.color} mt-0.5 text-lg leading-none`}>•</span>
-                                        <span className="text-eq-text text-sm font-medium leading-relaxed">{jot.text}</span>
-                                    </motion.div>
-                                ) : (
-                                    <div className="p-4 rounded-[16px] border border-dashed border-eq-divider min-h-[64px]" />
-                                )}
-                            </AnimatePresence>
+                <div className="flex-1 flex flex-col items-center justify-center mt-12 gap-16">
+                    
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="flex items-center gap-12"
+                    >
+                        <div className="bg-ic-bg-secondary p-10 rounded-3xl flex flex-col items-center border border-ic-coffee w-80">
+                            <Wine className="text-ic-text-secondary mb-6" size={64} />
+                            <h3 className="text-2xl font-bold mb-2">"Sips"</h3>
+                            <p className="text-ic-text-secondary text-center">Online connection. Text, notifications, feeds.</p>
                         </div>
-                    ))}
+
+                        <ArrowRight className="text-ic-gold" size={48} />
+
+                        <div className="bg-ic-coffee/20 p-10 rounded-3xl flex flex-col items-center border border-ic-gold/30 w-80">
+                            <GlassWater className="text-ic-gold mb-6" size={64} />
+                            <h3 className="text-2xl font-bold mb-2 text-ic-gold">A "Gulp"</h3>
+                            <p className="text-ic-text-secondary text-center">Real conversation. Sustained attention and vulnerability.</p>
+                        </div>
+                    </motion.div>
+
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="bg-ic-bg-secondary p-8 rounded-2xl flex items-center gap-8 max-w-4xl border-l-4 border-l-red-500"
+                    >
+                        <UserX className="text-red-500 shrink-0" size={48} />
+                        <div>
+                            <p className="text-xl text-ic-text leading-relaxed">
+                                Social media use tends to <span className="font-bold text-red-400">increase loneliness</span>, particularly for introverts and individuals with low self-esteem seeking a safer alternative to face-to-face contact.
+                            </p>
+                            <p className="text-ic-text-secondary mt-2">— Douglas Smith et al., Australian Journal of Psychology</p>
+                        </div>
+                    </motion.div>
+
                 </div>
 
             </div>
-        </SlideContainer>
+        </div>
     );
 }

@@ -9,16 +9,19 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                eq: {
-                    cream: "#FAFAF7",
-                    "cream-deep": "#F3F4F0",
-                    blue: "#2563EB",
-                    teal: "#0D9488",
-                    red: "#EF4444",
-                    amber: "#F59E0B",
-                    text: "#111827",
-                    "text-secondary": "#6B7280",
-                    divider: "#E5E7EB",
+                ic: {
+                    // Dark theme for coffee/shadow presentation
+                    bg: "#120E0D", // Very dark brown/black
+                    "bg-secondary": "#1E1815", // Slightly lighter dark brown
+                    coffee: "#4A3B32", // Mid brown
+                    "coffee-light": "#7D6454", // Light brown
+                    gold: "#D4AF37", // Gold accent
+                    "gold-muted": "#A68624", // Muted gold
+                    
+                    // Typography
+                    text: "#F5F2F0", // Off-white for readability
+                    "text-secondary": "#C8B8AD", // Light muted brown/gray for secondary text
+                    divider: "#3A2E28", // Subtle dark divider
                 },
             },
             animation: {

@@ -1,63 +1,77 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Users, Coffee, Mic2, Smartphone, Headphones, Ghost } from "lucide-react";
 
 export default function Slide1({ step }: { step: number }) {
     return (
-        <div className="relative w-full h-full flex flex-col items-center justify-center bg-eq-cream overflow-hidden">
+        <div className="relative w-full h-full flex flex-col items-center justify-center bg-ic-bg overflow-hidden text-ic-text">
 
-            {/* Soft gradient orbs */}
-            <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-eq-teal/10 blur-3xl animate-float" />
-            <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-eq-blue/10 blur-3xl animate-float-delayed" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-eq-amber/5 blur-3xl animate-pulse-soft" />
+            {/* Dark coffee / gold ambient background */}
+            <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-ic-coffee/20 blur-[100px] animate-float" />
+            <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-ic-gold/5 blur-[120px] animate-float-delayed" />
 
-            {/* All content positioned from center — quote is placed below via absolute so it doesn't push title */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-8">
+            <div className="relative z-10 w-full max-w-6xl px-12 flex flex-col items-center justify-center h-full">
 
-                {/* Title */}
-                <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl font-bold text-eq-text tracking-tight leading-[0.95]"
-                >
-                    Equilibrium
-                </motion.h1>
-
-                {/* Tagline */}
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 1 }}
-                    className="mt-6 text-xl md:text-2xl text-eq-text-secondary font-light max-w-xl tracking-wide"
-                >
-                    Redefining student wellbeing.
-                </motion.p>
-
-                {/* Accent line */}
                 <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-                    className="mt-8 h-1 w-16 rounded-full bg-eq-teal origin-center"
-                />
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-center"
+                >
+                    <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6">
+                        The Illusion of <span className="text-ic-gold">Connection</span>
+                    </h1>
+                    <p className="text-2xl text-ic-text-secondary font-light">
+                        A room can be full and still be empty.
+                    </p>
+                </motion.div>
 
-                {/* Quote — fades in below without pushing anything */}
-                <div className="mt-10 h-12 relative w-full max-w-lg">
-                    <AnimatePresence>
-                        {step >= 1 && (
-                            <motion.p
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className="absolute inset-0 text-base text-eq-text-secondary/70 font-light italic text-center"
-                            >
-                                &ldquo;The most dangerous thing we ask students to do is sacrifice themselves slowly.&rdquo;
-                            </motion.p>
-                        )}
-                    </AnimatePresence>
+                {/* The Two Sides of History */}
+                <div className="mt-20 w-full grid grid-cols-2 gap-16 items-center">
+                    {/* Side 1: The Past */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ 
+                            opacity: step >= 1 ? 1 : 0, 
+                            x: step >= 1 ? 0 : -30 
+                        }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-col items-end text-right border-r border-ic-divider pr-16"
+                    >
+                                <h3 className="text-2xl text-ic-gold-muted mb-6">The Packed Town Square</h3>
+                                <div className="flex gap-4 mb-4 text-ic-coffee-light">
+                                    <Users size={32} />
+                                    <Coffee size={32} />
+                                    <Mic2 size={32} />
+                                </div>
+                                <p className="text-lg text-ic-text-secondary max-w-sm">
+                                    Constant noise. Arguments about politics. Neighbors asking about families.
+                                </p>
+                    </motion.div>
+
+                    {/* Side 2: The Present */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ 
+                            opacity: step >= 2 ? 1 : 0, 
+                            x: step >= 2 ? 0 : 30 
+                        }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-col items-start pl-4"
+                    >
+                                <h3 className="text-2xl text-ic-text mb-6">The Modern Coffee Shop</h3>
+                                <div className="flex gap-4 mb-4 text-ic-text-secondary">
+                                    <Smartphone size={32} />
+                                    <Headphones size={32} />
+                                    <Ghost size={32} />
+                                </div>
+                                <p className="text-lg text-ic-text-secondary max-w-sm">
+                                    Every table taken. Screens glow. Earbuds block out sound. People shift past like ghosts.
+                                </p>
+                    </motion.div>
                 </div>
+
             </div>
         </div>
     );

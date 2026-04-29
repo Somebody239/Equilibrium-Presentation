@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Equilibrium — Presentation",
-    description: "A calm, minimal app designed to help students understand and reduce chronic academic stress.",
+    title: "The Illusion of Connection — Presentation",
+    description: "To what extent do modern communal spaces address the loneliness epidemic, or do they create the illusion of connection while leaving its root causes intact?",
 };
 
 export default function RootLayout({
