@@ -107,13 +107,7 @@ export default function PresentationPage() {
                 </span>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-ic-divider z-50 pointer-events-none">
-                <motion.div
-                    className="h-full bg-ic-gold"
-                    animate={{ width: `${((currentSlide + 1) / slideConfig.length) * 100}%` }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                />
-            </div>
+
         </div>
     );
 }

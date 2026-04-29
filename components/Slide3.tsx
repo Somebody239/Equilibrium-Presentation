@@ -39,7 +39,7 @@ export default function Slide3({ step }: { step: number }) {
                         <Building2 className="text-ic-gold mb-6" size={48} />
                         <h3 className="text-2xl font-bold mb-4">Bowling Alone</h3>
                         <p className="text-ic-text-secondary text-lg flex-1">
-                            Robert Putnam's data shows the erosion of social infrastructure began long before smartphones—rooted in suburbanization, mobility, and work patterns.
+                            Robert Putnam's data shows the erosion of social infrastructure began long before smartphones, rooted in suburbanization, mobility, and work patterns.
                         </p>
                     </motion.div>
 

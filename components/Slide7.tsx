@@ -26,7 +26,7 @@ export default function Slide7({ step }: { step: number }) {
                     >
                         <h3 className="text-3xl font-bold mb-6 text-ic-gold">The Verdict: By Default, No.</h3>
                         <p className="text-xl text-ic-text-secondary leading-relaxed">
-                            They offer the aesthetics of community (crowded rooms, notifications). They only reduce loneliness when specific conditions are met—conditions requiring <span className="text-ic-text font-bold">conscious effort</span> by planners, owners, and participants.
+                            They offer the aesthetics of community (crowded rooms, notifications). They only reduce loneliness when specific conditions are met, conditions requiring <span className="text-ic-text font-bold">conscious effort</span> by planners, owners, and participants.
                         </p>
                     </motion.div>
 

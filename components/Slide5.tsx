@@ -50,7 +50,7 @@ export default function Slide5({ step }: { step: number }) {
                             <p className="text-xl text-ic-text leading-relaxed">
                                 If digital connection were an adequate substitute, loneliness should have fallen after decades of internet growth. <span className="font-bold text-red-400">It did not.</span>
                             </p>
-                            <p className="text-ic-text-secondary mt-2">— 2023 U.S. Surgeon General Advisory</p>
+                            <p className="text-ic-text-secondary mt-2">- 2023 U.S. Surgeon General Advisory</p>
                         </div>
                     </motion.div>
 
