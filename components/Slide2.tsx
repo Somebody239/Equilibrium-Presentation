@@ -77,7 +77,7 @@ export default function Slide2({ step }: { step: number }) {
                                 >
                                     <h3 className="text-3xl text-ic-gold mb-4">The Paradox</h3>
                                     <p className="text-xl text-ic-text-secondary leading-relaxed border-l-2 border-ic-coffee pl-6">
-                                        More spaces and technologies promise connection, while loneliness reaches the level of a public health emergency.
+                                        More spaces, more technology, yet loneliness at epidemic levels. The outward aesthetic of community masks a structural emergency.
                                     </p>
                                 </motion.div>
 
@@ -91,10 +91,10 @@ export default function Slide2({ step }: { step: number }) {
                                     className="bg-ic-coffee/10 p-8 rounded-xl border border-ic-coffee/30"
                                 >
                                     <h3 className="text-2xl text-ic-text mb-4 flex items-center gap-3">
-                                        <HeartPulse className="text-ic-gold" /> Thesis
+                                        <HeartPulse className="text-ic-gold" /> Research Question
                                     </h3>
                                     <p className="text-lg text-ic-text-secondary leading-relaxed">
-                                        Modern communal spaces simulate the outward conditions of community without repairing the underlying structures. Genuine reduction depends on how intentionally places are designed and used.
+                                        To what extent do modern communal spaces address the loneliness epidemic, or do they create the illusion of connection while leaving its root causes intact?
                                     </p>
                                 </motion.div>
                     </div>

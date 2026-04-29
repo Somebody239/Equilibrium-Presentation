@@ -43,7 +43,7 @@ export default function Slide7({ step }: { step: number }) {
                                 Ann Killion notes that the memories of Candlestick Park live on long after the concrete was removed. The emotional reality lived in <span className="text-ic-text font-bold">shared rituals, relationships, and stories</span>.
                             </p>
                             <p className="text-xl font-light text-ic-gold italic border-t border-ic-divider pt-4">
-                                Constructing more buildings does not rebuild community.
+                                More cafes and platforms do not rebuild community. Connection lives in the conditions that make it real.
                             </p>
                         </div>
                     </motion.div>

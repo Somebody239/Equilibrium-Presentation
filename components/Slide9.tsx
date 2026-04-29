@@ -36,7 +36,7 @@ export default function Slide9({ step }: { step: number }) {
                     </div>
 
                     <p className="mt-16 text-xl text-ic-gold font-bold tracking-widest uppercase">
-                        Thank You
+                        Thank You. Here is the works cited.
                     </p>
                 </motion.div>
 

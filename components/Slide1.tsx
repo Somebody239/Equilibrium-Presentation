@@ -46,7 +46,7 @@ export default function Slide1({ step }: { step: number }) {
                                     <Mic2 size={32} />
                                 </div>
                                 <p className="text-lg text-ic-text-secondary max-w-sm">
-                                    Constant noise. Arguments about politics. Neighbors asking about families.
+                                    Neighbors argue, strangers chat, and conversation is almost guaranteed.
                                 </p>
                     </motion.div>
 
@@ -67,7 +67,7 @@ export default function Slide1({ step }: { step: number }) {
                                     <Ghost size={32} />
                                 </div>
                                 <p className="text-lg text-ic-text-secondary max-w-sm">
-                                    Every table taken. Screens glow. Earbuds block out sound. People shift past like ghosts.
+                                    Every table taken. Earbuds are in. People pass each other like ghosts. Connected but hollow.
                                 </p>
                     </motion.div>
                 </div>

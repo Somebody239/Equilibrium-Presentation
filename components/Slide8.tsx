@@ -73,7 +73,7 @@ export default function Slide8({ step }: { step: number }) {
                 >
                     <Globe2 className="text-ic-text-secondary shrink-0" size={32} />
                     <p className="text-ic-text-secondary text-lg">
-                        <span className="text-ic-text font-bold">Limitations:</span> Most research focuses on Western contexts. More research is needed in non-Western and lower-income settings where traditional networks may function differently.
+                        <span className="text-ic-text font-bold">Limitations:</span> Passive proximity does not solve loneliness. Only environments designed for sustained, reciprocal interaction begin to address it at its roots.
                     </p>
                 </motion.div>
 

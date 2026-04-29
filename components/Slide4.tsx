@@ -43,11 +43,11 @@ export default function Slide4({ step }: { step: number }) {
                                     }}
                                     className="flex items-start gap-6 bg-ic-bg-secondary p-8 rounded-2xl"
                                 >
-                                    <Clock className="text-ic-gold shrink-0 mt-1" size={36} />
+                                    <MapPin className="text-ic-gold shrink-0 mt-1" size={36} />
                                     <div>
-                                        <h4 className="text-2xl font-bold mb-2">Active Use Over Availability</h4>
+                                        <h4 className="text-2xl font-bold mb-2">Haruki Murakami</h4>
                                         <p className="text-ic-text-secondary text-lg">
-                                            Choi & Ailshire: Higher availability of third places correlates with lower loneliness only when there is <span className="text-ic-text font-bold">active use</span> of those spaces.
+                                            "Modern mobility permanently severs the bonds that made a community real. A new cafe cannot recreate that." (A Walk to Kobe)
                                         </p>
                                     </div>
                                 </motion.div>
@@ -75,26 +75,14 @@ export default function Slide4({ step }: { step: number }) {
                                     </motion.span>
                                     <p className="text-xl text-ic-text">Hosted regular group meetups</p>
                                     <p className="text-ic-text-secondary mt-4 max-w-sm mx-auto">
-                                        Required decisions about furniture, tolerance for long stays, and outreach by staff.
+                                        Elderly coffee mornings, parent groups, and hobby circles. Required deliberate choices; they did not emerge automatically.
                                     </p>
                                 </motion.div>
                     </div>
                     
                 </div>
                 
-                        <motion.div 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ 
-                                opacity: step >= 2 ? 1 : 0, 
-                                y: step >= 2 ? 0 : 20 
-                            }}
-                            className="mt-8 text-center bg-ic-bg-secondary p-6 rounded-full inline-flex mx-auto items-center gap-4 px-10"
-                        >
-                            <MapPin className="text-ic-gold" />
-                            <p className="text-lg text-ic-text-secondary">
-                                "A third place is not defined by walls and tables, but by the <span className="text-ic-text">repeated encounters</span> within it."
-                            </p>
-                        </motion.div>
+
 
             </div>
         </div>

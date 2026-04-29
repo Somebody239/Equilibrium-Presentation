@@ -75,10 +75,10 @@ export default function Slide6({ step }: { step: number }) {
                                 <h3 className="text-3xl font-bold mb-6">The Clarification</h3>
                                 <div className="space-y-4 text-xl text-ic-text-secondary leading-relaxed">
                                     <p>
-                                        These conditions are strict. The Li study measures <span className="text-ic-text font-bold">amount</span> of communication, not depth. 
+                                        Li measures frequency, not <span className="text-ic-text font-bold">depth</span>. Rhubart & Li show non-interactive visits are linked with higher loneliness.
                                     </p>
                                     <p>
-                                        Without deliberate design and intentional use, modern tools risk reinforcing the <span className="text-ic-gold">illusion of connection</span> more than its reality.
+                                        Finlay notes cafes grow partly because better community spaces are <span className="text-ic-gold font-bold">disappearing</span>.
                                     </p>
                                 </div>
                             </motion.div>

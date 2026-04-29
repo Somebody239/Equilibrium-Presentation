@@ -48,9 +48,9 @@ export default function Slide5({ step }: { step: number }) {
                         <UserX className="text-red-500 shrink-0" size={48} />
                         <div>
                             <p className="text-xl text-ic-text leading-relaxed">
-                                Social media use tends to <span className="font-bold text-red-400">increase loneliness</span>, particularly for introverts and individuals with low self-esteem seeking a safer alternative to face-to-face contact.
+                                If digital connection were an adequate substitute, loneliness should have fallen after decades of internet growth. <span className="font-bold text-red-400">It did not.</span>
                             </p>
-                            <p className="text-ic-text-secondary mt-2">— Douglas Smith et al., Australian Journal of Psychology</p>
+                            <p className="text-ic-text-secondary mt-2">— 2023 U.S. Surgeon General Advisory</p>
                         </div>
                     </motion.div>
 

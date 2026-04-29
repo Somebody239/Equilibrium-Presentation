@@ -68,7 +68,7 @@ export default function Slide3({ step }: { step: number }) {
                                 className="bg-ic-bg p-6 rounded-xl border border-red-900/30 text-center"
                             >
                                 <span className="block text-5xl font-bold text-red-400 mb-2">-23%</span>
-                                <span className="text-sm text-ic-text-secondary uppercase tracking-wider">Decline in food/personal service establishments</span>
+                                <span className="text-sm text-ic-text-secondary uppercase tracking-wider">Decline in third places. The only growth: eateries.</span>
                         </motion.div>
                     </motion.div>
                 </div>
@@ -80,7 +80,7 @@ export default function Slide3({ step }: { step: number }) {
                     className="mt-12 text-center"
                 >
                     <p className="text-xl font-light text-ic-coffee-light max-w-4xl mx-auto italic">
-                        "A modern café is often a decorative layer placed over a deeper structural void."
+                        "A modern cafe is not a revival of community. It is a decorative layer over a deeper structural void."
                     </p>
                 </motion.div>
 
